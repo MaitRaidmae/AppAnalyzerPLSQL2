@@ -1,0 +1,19 @@
+--------------------------------------------------------
+--  DDL for View ALL_UT_LOOKUP_DATATYPES
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES" ("ID", "CAT_ID", "TYPE_ID", "TYPE_STRING") AS 
+  SELECT
+    "ID" AS "ID"
+   ,"CAT_ID" AS "CAT_ID"
+   ,"TYPE_ID" AS "TYPE_ID"
+   ,"TYPE_STRING" AS "TYPE_STRING"
+  FROM
+    "UT_LOOKUP_DATATYPES"
+  WITH READ ONLY;
+
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES"."ID" IS 'Lookup Datatype identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES"."CAT_ID" IS 'Lookup Category identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES"."TYPE_ID" IS 'Datatype SQL type code';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES"."TYPE_STRING" IS 'Datatype type name';
+   COMMENT ON TABLE "HUNDISILM"."ALL_UT_LOOKUP_DATATYPES"  IS 'Unit Test - Lookup Datatypes';

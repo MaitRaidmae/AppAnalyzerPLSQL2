@@ -1,0 +1,27 @@
+--------------------------------------------------------
+--  DDL for View ALL_UT_TEST_IMPL_ARG_RESULTS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS" ("UTIAR_ID", "UTIR_ID", "UTI_ID", "ARG_ID", "NAME", "STATUS", "MESSAGE", "RUN_DATE") AS 
+  SELECT
+    "UTIAR_ID" AS "UTIAR_ID"
+   ,"UTIR_ID" AS "UTIR_ID"
+   ,"UTI_ID" AS "UTI_ID"
+   ,"ARG_ID" AS "ARG_ID"
+   ,"NAME" AS "NAME"
+   ,"STATUS" AS "STATUS"
+   ,"MESSAGE" AS "MESSAGE"
+   ,"RUN_DATE" AS "RUN_DATE"
+  FROM
+    "UT_TEST_IMPL_ARG_RESULTS"
+  WITH READ ONLY;
+
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."UTIAR_ID" IS 'Test Implementation Argument Result identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."UTIR_ID" IS 'Test Implementation Result identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."UTI_ID" IS 'Test Implementation identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."ARG_ID" IS 'Test Argument identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."NAME" IS 'Result name';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."STATUS" IS 'Result status';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."MESSAGE" IS 'Result message, if any';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"."RUN_DATE" IS 'Test run timestamp';
+   COMMENT ON TABLE "HUNDISILM"."ALL_UT_TEST_IMPL_ARG_RESULTS"  IS 'Unit Test - Test Implementation Argument Results';

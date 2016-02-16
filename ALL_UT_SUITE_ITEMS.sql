@@ -1,0 +1,27 @@
+--------------------------------------------------------
+--  DDL for View ALL_UT_SUITE_ITEMS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "HUNDISILM"."ALL_UT_SUITE_ITEMS" ("UT_SID", "UT_ID", "UT_NSID", "RUN_START", "RUN_TEAR", "SEQUENCE", "CREATED_ON", "CREATED_BY") AS 
+  SELECT
+    "UT_SID" AS "UT_SID"
+   ,"UT_ID" AS "UT_ID"
+   ,"UT_NSID" AS "UT_NSID"
+   ,"RUN_START" AS "RUN_START"
+   ,"RUN_TEAR" AS "RUN_TEAR"
+   ,"SEQUENCE" AS "SEQUENCE"
+   ,"CREATED_ON" AS "CREATED_ON"
+   ,"CREATED_BY" AS "CREATED_BY"
+  FROM
+    "UT_SUITE_ITEMS"
+  WITH READ ONLY;
+
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."UT_SID" IS 'Suite identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."UT_ID" IS 'Test identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."UT_NSID" IS 'Nested Suite identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."RUN_START" IS 'Execute Startup Code Hook - Y or N';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."RUN_TEAR" IS 'Execute Teardown Code Hook - Y or N';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."SEQUENCE" IS 'Index within test list of Suite';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."CREATED_ON" IS 'Creation timestamp';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_SUITE_ITEMS"."CREATED_BY" IS 'Created by user';
+   COMMENT ON TABLE "HUNDISILM"."ALL_UT_SUITE_ITEMS"  IS 'Unit Test - Suite Items';

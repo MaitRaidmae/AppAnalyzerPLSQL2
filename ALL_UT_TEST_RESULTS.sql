@@ -1,0 +1,23 @@
+--------------------------------------------------------
+--  DDL for View ALL_UT_TEST_RESULTS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "HUNDISILM"."ALL_UT_TEST_RESULTS" ("UTR_ID", "UT_ID", "NAME", "STATUS", "MESSAGE", "RUN_DATE") AS 
+  SELECT
+    "UTR_ID" AS "UTR_ID"
+   ,"UT_ID" AS "UT_ID"
+   ,"NAME" AS "NAME"
+   ,"STATUS" AS "STATUS"
+   ,"MESSAGE" AS "MESSAGE"
+   ,"RUN_DATE" AS "RUN_DATE"
+  FROM
+    "UT_TEST_RESULTS"
+  WITH READ ONLY;
+
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."UTR_ID" IS 'Test Result identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."UT_ID" IS 'Test identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."NAME" IS 'Result name';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."STATUS" IS 'Result status';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."MESSAGE" IS 'Result message, if any';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_RESULTS"."RUN_DATE" IS 'Test run timestamp';
+   COMMENT ON TABLE "HUNDISILM"."ALL_UT_TEST_RESULTS"  IS 'Unit Test - Test Results';

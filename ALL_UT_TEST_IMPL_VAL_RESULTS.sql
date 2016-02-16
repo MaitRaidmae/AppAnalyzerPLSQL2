@@ -1,0 +1,33 @@
+--------------------------------------------------------
+--  DDL for View ALL_UT_TEST_IMPL_VAL_RESULTS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS" ("UTIVR_ID", "UTIR_ID", "UTI_ID", "VAL_ID", "VAL_TYPE", "STATUS", "MESSAGE", "VAL_START_TIME", "VAL_END_TIME", "VAL_DURATION", "RUN_DATE") AS 
+  SELECT
+    "UTIVR_ID" AS "UTIVR_ID"
+   ,"UTIR_ID" AS "UTIR_ID"
+   ,"UTI_ID" AS "UTI_ID"
+   ,"VAL_ID" AS "VAL_ID"
+   ,"VAL_TYPE" AS "VAL_TYPE"
+   ,"STATUS" AS "STATUS"
+   ,"MESSAGE" AS "MESSAGE"
+   ,"VAL_START_TIME" AS "VAL_START_TIME"
+   ,"VAL_END_TIME" AS "VAL_END_TIME"
+   ,"VAL_DURATION" AS "VAL_DURATION"
+   ,"RUN_DATE" AS "RUN_DATE"
+  FROM
+    "UT_TEST_IMPL_VAL_RESULTS"
+  WITH READ ONLY;
+
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."UTIVR_ID" IS 'Test Implementation Validation Result identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."UTIR_ID" IS 'Test Implementation Result identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."UTI_ID" IS 'Test Implementation identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."VAL_ID" IS 'Validation identifier';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."VAL_TYPE" IS 'Validation type';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."STATUS" IS 'Validation status';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."MESSAGE" IS 'Validation message, if any';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."VAL_START_TIME" IS 'Start time of test run validation in formated text';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."VAL_END_TIME" IS 'End time of test run validation in formated text';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."VAL_DURATION" IS 'Duration of test run validation in milliseconds';
+   COMMENT ON COLUMN "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"."RUN_DATE" IS 'Test run timestamp';
+   COMMENT ON TABLE "HUNDISILM"."ALL_UT_TEST_IMPL_VAL_RESULTS"  IS 'Unit Test - Test Implementation Validation Results';
